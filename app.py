@@ -4,14 +4,14 @@ import streamlit as st
 st.set_page_config(page_title="Action Research Navigator", page_icon="⛵", layout="wide")
 
 # Spielzustände (Session State)
-if "current_scenario" not in st.state_defaults:
-    if "current_scenario" not in st.session_state:
-        st.session_state.current_scenario = 0
-        st.session_state.resilience = 50
-        st.session_state.methods = 50
-        st.session_state.autonomy = 50
-        st.session_state.completed = False
-        st.session_state.history = []
+# Spielzustände (Session State)
+if "current_scenario" not in st.session_state:
+    st.session_state.current_scenario = 0
+    st.session_state.resilience = 50
+    st.session_state.methods = 50
+    st.session_state.autonomy = 50
+    st.session_state.completed = False
+    st.session_state.history = []
 
 # Szenarien-Datenbank
 scenarios = [
